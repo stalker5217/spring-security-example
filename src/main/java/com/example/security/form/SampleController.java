@@ -17,7 +17,6 @@ public class SampleController {
             model.addAttribute("message", "hello, " + principal.getName());
         }
 
-
         return "index";
     }
 

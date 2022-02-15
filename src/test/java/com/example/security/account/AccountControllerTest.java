@@ -20,6 +20,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.example.security.security.account.Account;
+import com.example.security.security.account.AccountService;
+
 /**
  *  [권한에 따른 접근 테스트]
  *  Security Test 에서 인증을 mocking 할 수 있음.
@@ -38,7 +41,7 @@ class AccountControllerTest {
     MockMvc mockMvc;
 
     @Autowired
-    AccountService accountService;
+	AccountService accountService;
 
     @Test
     @DisplayName("익명 사용자의 인덱스 페이지 접근")

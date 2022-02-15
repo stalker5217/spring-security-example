@@ -1,0 +1,30 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        #show_sql: true
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: "jdbc:h2:mem:testdb;MODE=MYSQL;DB_CLOSE_DELAY=-1"
+    username: sa
+    password:
+
+logging.level:
+  org.hibernate.SQL: debug
+
+server:
+  port: 8080
+
+jwt:
+  header: Authorization
+  base64-secret: SGVsbG8gd29ybGQuIFRoaXMgaXMgU2VjcmV0IEtleSBmb3IgSldULiBIZWxsbyB3b3JsZC4gVGhpcyBpcyBTZWNyZXQgS2V5IGZvciBKV1QuIEhlbGxvIHdvcmxkLiBUaGlzIGlzIFNlY3JldCBLZXkgZm9yIEpXVC4gSGVsbG8gd29ybGQuIFRoaXMgaXMgU2VjcmV0IEtleSBmb3IgSldULiBIZWxsbyB3b3JsZC4gVGhpcyBpcyBTZWNyZXQgS2V5IGZvciBKV1QuIEhlbGxvIHdvcmxkLiBUaGlzIGlzIFNlY3JldCBLZXkgZm9yIEpXVC4g
+  token-validity-in-seconds: 86400
